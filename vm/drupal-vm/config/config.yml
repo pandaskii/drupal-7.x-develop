@@ -1,11 +1,11 @@
 vagrant_box:                    geerlingguy/ubuntu1604
-vagrant_hostname:               govcms7-casa.test
-vagrant_machine_name:           govcms7_casa_vm
+vagrant_hostname:               d7.test
+vagrant_machine_name:           d7_vm
 vagrant_ip:                     0.0.0.0
 
 vagrant_synced_folders:
   - local_path:                 .
-    destination:                /var/www/govcms7
+    destination:                /var/www/d7
     type:                       nfs
     create:                     true
 
@@ -24,20 +24,20 @@ drupal_build_composer:          false
 
 drupal_install_site:            false
 
-drupal_core_path:               "/var/www/govcms7/docroot"
+drupal_core_path:               "/var/www/d7/docroot"
 
-drupal_db_user:                 govcms
-drupal_db_password:             govcms
-drupal_db_name:                 govcms
+drupal_db_user:                 drupal
+drupal_db_password:             drupal
+drupal_db_name:                 drupal
 
 drupal_major_version:           7
-drupal_site_name:               GovCMS
-drupal_install_profile:         govcms
-# drupal_enable_modules:        [ 'devel' ]
+drupal_site_name:               Drupal
+drupal_install_profile:         standard
+drupal_enable_modules:          [ 'devel' ]
 
 drush_launcher_install:         no
 drush_install_from_source:      yes
-drush_source_install_version:   "8.1.17"
+drush_source_install_version:   "8.1.18"
 
 configure_drush_aliases:        true
 
